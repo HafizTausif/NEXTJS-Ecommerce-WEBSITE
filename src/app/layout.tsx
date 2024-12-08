@@ -4,7 +4,7 @@
 "use client"; // Required for client-side features
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { 
   FaPhone, 
   FaEnvelope, 
