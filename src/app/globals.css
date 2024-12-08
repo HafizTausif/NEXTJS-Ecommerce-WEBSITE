@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fffefe;
+    --foreground: #020202;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.editor-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px;
+  background: var(--light-gray-1);
+}
+
+.editor-pick-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 48px;
+  text-align: center;
+
+  > .title-xl {
+    text-transform: uppercase;
+  }
+}
+
+.editor-pick__galery {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
+  gap: 16px;
+}
+
+.galery-photo {
+  text-decoration: none;
+  position: relative;
+  max-width: 324px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  > figure {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.galery-photo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 1s ease;
+
+  &:hover {
+    height: 120%;
+  }
+}
+
+.photo-description {
+  position: absolute;
+  padding: 12px 26px;
+  background: var(--light-background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1;
+  left: 18px;
+  bottom: 18px;
+}
